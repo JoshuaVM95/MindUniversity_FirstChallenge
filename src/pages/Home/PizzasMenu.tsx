@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './Home.module.scss'
-import { pizzasMenu } from './pizzas'
+import React from "react";
+import styles from "./Home.module.scss";
+import { pizzasMenu } from "./pizzas";
 
 export const PizzasMenu = (): React.ReactElement => {
 	return (
@@ -16,9 +16,9 @@ export const PizzasMenu = (): React.ReactElement => {
 							</div>
 							<p className={styles.description}>{pizza.ingredients}</p>
 						</div>
-					)
+					);
 				})}
 			</div>
 		</div>
-	)
-}
+	);
+};

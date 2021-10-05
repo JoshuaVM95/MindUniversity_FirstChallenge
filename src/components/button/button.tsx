@@ -1,12 +1,12 @@
-import React from 'react'
-import styles from './button.module.scss'
+import React from "react";
+import styles from "./button.module.scss";
 
 interface ButtonProps {
-	text: string
-	size: 'small' | 'medium' | 'large'
-	color: string
-	onClick(event: React.MouseEvent): void
-	disabled?: boolean
+	text: string;
+	size: "small" | "medium" | "large";
+	color: string;
+	onClick(event: React.MouseEvent): void;
+	disabled?: boolean;
 }
 
 export const Button = ({ text, size, color, onClick, disabled }: ButtonProps): React.ReactElement => {
@@ -19,5 +19,5 @@ export const Button = ({ text, size, color, onClick, disabled }: ButtonProps): R
 		>
 			{text}
 		</button>
-	)
-}
+	);
+};

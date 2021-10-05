@@ -1,25 +1,25 @@
-import React, { useRef } from 'react'
-import styles from './navbar.module.scss'
-import { Link } from 'react-router-dom'
+import React, { useRef } from "react";
+import styles from "./navbar.module.scss";
+import { Link } from "react-router-dom";
 
 interface MenuProps {
-	onHideMenu(): void
+	onHideMenu(): void;
 }
 
 export const Menu = ({ onHideMenu }: MenuProps): React.ReactElement => {
-	const menuContainer = useRef<HTMLDivElement>(null)
-	const menuFilter = useRef<HTMLDivElement>(null)
+	const menuContainer = useRef<HTMLDivElement>(null);
+	const menuFilter = useRef<HTMLDivElement>(null);
 
 	const hideMenu = () => {
 		if (menuContainer.current && menuFilter.current) {
-			menuContainer.current.animate([{ right: '-26rem' }], { duration: 300, fill: 'forwards', delay: 100 })
-			menuFilter.current.animate([{ opacity: 0 }], { duration: 200, fill: 'forwards' })
+			menuContainer.current.animate([{ right: "-26rem" }], { duration: 300, fill: "forwards", delay: 100 });
+			menuFilter.current.animate([{ opacity: 0 }], { duration: 200, fill: "forwards" });
 			const myInterval = setInterval(() => {
-				clearInterval(myInterval)
-				onHideMenu()
-			}, 500)
+				clearInterval(myInterval);
+				onHideMenu();
+			}, 500);
 		}
-	}
+	};
 
 	return (
 		<div ref={menuContainer} className={`${styles.menuContainer}`}>
@@ -37,5 +37,5 @@ export const Menu = ({ onHideMenu }: MenuProps): React.ReactElement => {
 				Orders
 			</Link>
 		</div>
-	)
-}
+	);
+};

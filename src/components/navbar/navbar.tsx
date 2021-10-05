@@ -1,27 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu } from './menu'
-import styles from './navbar.module.scss'
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu } from "./menu";
+import styles from "./navbar.module.scss";
 
 export const NavBar = (): React.ReactElement => {
-	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
-	const navBarContainer = useRef<HTMLDivElement>(null)
+	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+	const navBarContainer = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const addBackgroundToNavBar = () => {
 			if (navBarContainer.current) {
 				if (window.pageYOffset === 0) {
-					navBarContainer.current.style.backgroundColor = 'transparent'
+					navBarContainer.current.style.backgroundColor = "transparent";
 				} else {
-					navBarContainer.current.style.backgroundColor = '#f3d528'
+					navBarContainer.current.style.backgroundColor = "#f3d528";
 				}
 			}
-		}
-		window.addEventListener('scroll', addBackgroundToNavBar)
+		};
+		window.addEventListener("scroll", addBackgroundToNavBar);
 		return () => {
-			window.removeEventListener('scroll', addBackgroundToNavBar)
-		}
-	}, [])
+			window.removeEventListener("scroll", addBackgroundToNavBar);
+		};
+	}, []);
 
 	return (
 		<div ref={navBarContainer} className={styles.navBarContainer}>
@@ -34,5 +34,5 @@ export const NavBar = (): React.ReactElement => {
 			</button>
 			{isMenuOpen && <Menu onHideMenu={() => setIsMenuOpen(false)} />}
 		</div>
-	)
-}
+	);
+};
