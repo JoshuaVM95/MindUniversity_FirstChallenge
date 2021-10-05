@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button tests renders correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="button small"
+    style="background-color: blue;"
+  >
+    Test Btn
+  </button>
+</DocumentFragment>
+`;

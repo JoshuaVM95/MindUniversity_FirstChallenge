@@ -1,0 +1,90 @@
+.ordersContainer {
+	width: 100vw;
+	height: calc(100vh - 8rem);
+	overflow: auto;
+	.ordersHeader {
+		display: flex;
+		align-items: center;
+		background-color: #f3d528;
+		height: 8rem;
+		.homeLink {
+			font-size: 2rem;
+			color: #fff;
+			text-decoration: none;
+			margin-left: 2.6rem;
+		}
+		.ordersTitle {
+			font-size: 3.4rem;
+			text-align: center;
+			flex: 1;
+			margin-right: 4.6rem;
+		}
+	}
+
+	.orderList {
+		padding: 2rem 8rem;
+		max-height: calc(100% - 8rem);
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		overflow: auto;
+		.orderContainer {
+			font-size: 1.8rem;
+			width: 48%;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid;
+			padding: 2rem;
+		}
+
+		.loaderContainer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: calc(100vh - 20rem);
+			width: 100%;
+			.spinner {
+				width: 12rem;
+				height: 12rem;
+				position: relative;
+				div {
+					box-sizing: border-box;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					border: 0.8rem solid transparent;
+					border-top-color: #f3e64f;
+					border-radius: 50%;
+					animation: spinn 1.2s linear infinite;
+					&:nth-child(2) {
+						border-bottom-color: #f3e64f;
+					}
+				}
+			}
+		}
+
+		.noOrdersMessage {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: calc(100vh - 20rem);
+			width: 100%;
+			font-size: 2.6rem;
+		}
+	}
+}
+
+@keyframes spinn {
+	0% {
+		transform: rotate(0deg);
+		border-width: 1rem;
+	}
+	50% {
+		transform: rotate(180deg);
+		border-width: 0.1rem;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-width: 1rem;
+	}
+}

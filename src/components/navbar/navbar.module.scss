@@ -1,0 +1,121 @@
+.navBarContainer {
+	background-color: transparent;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	font-weight: 700;
+	position: fixed;
+	width: 100vw;
+	z-index: 100;
+	transition: all 0.2s;
+
+	.navLink {
+		color: #fff;
+		font-size: 4rem;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.navIcon {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 26px;
+		right: 26px;
+		cursor: pointer;
+		color: #fff;
+		background-color: transparent;
+		border: none;
+		p {
+			font-size: 2rem;
+			margin-right: 12px;
+		}
+		.bars {
+			font-size: 2.8rem;
+		}
+	}
+}
+
+.menuContainer {
+	position: fixed;
+	right: -26rem;
+	background-color: #f3d528;
+	width: 26rem;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	animation: showMenu 0.3s forwards;
+	.closeMenuBtn {
+		position: absolute;
+		top: 3.2rem;
+		right: 2rem;
+		background-color: transparent;
+		border: none;
+		color: #fff;
+		font-size: 3.2rem;
+		cursor: pointer;
+		&:hover {
+			color: #db3630;
+		}
+
+		&:active {
+			color: #ac2b27;
+		}
+	}
+	.menuFilter {
+		background-color: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		right: 26rem;
+		width: calc(100vw - 26rem);
+		height: 100vh;
+		z-index: 1;
+		opacity: 0;
+		animation: showFilter 0.5s forwards 0.2s;
+	}
+	.menuLink {
+		font-size: 2.8rem;
+		color: #fff;
+		text-decoration: none;
+		margin-bottom: 2.4rem;
+		&:hover {
+			color: #db3630;
+		}
+
+		&:active {
+			color: #ac2b27;
+		}
+	}
+}
+
+@keyframes showMenu {
+	to {
+		right: 0;
+	}
+}
+
+@keyframes showFilter {
+	to {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.navBarContainer {
+		.navLink {
+		}
+
+		.navIcon {
+			right: 1.2rem;
+			p {
+				display: none;
+			}
+			.bars {
+			}
+		}
+	}
+}

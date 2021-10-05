@@ -1,0 +1,16 @@
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 8rem;
+    font-size: 2.8rem;
+    padding: 0 4rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    i {
+        cursor: pointer;
+        margin: 0 0.6rem;
+    }
+}

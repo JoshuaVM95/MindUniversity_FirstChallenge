@@ -1,0 +1,54 @@
+.cardContainer {
+	width: 33.3%;
+	height: 100%;
+	margin: 0 3.2rem;
+	padding: 2.4rem 0;
+	text-align: center;
+	.cardImage {
+		width: 98%;
+		height: 60%;
+		object-fit: cover;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border-radius: 8px;
+	}
+	.cardTitle {
+		font-size: 2.6rem;
+	}
+	.cardDescription {
+		font-size: 1.8rem;
+	}
+	.cardPrice {
+		font-size: 2.4rem;
+		font-weight: bold;
+		color: #f3d528;
+		margin-bottom: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.cardContainer {
+		.cardImage {
+			height: 20rem;
+		}
+		.cardTitle {
+		}
+		.cardDescription {
+		}
+		.cardPrice {
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.cardContainer {
+		width: 80%;
+		.cardImage {
+		}
+		.cardTitle {
+		}
+		.cardDescription {
+		}
+		.cardPrice {
+		}
+	}
+}
