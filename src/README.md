@@ -1,3 +1,7 @@
+# [App](https://pizza-challenge-5be15.web.app/)
+
+Hosted app in firebase
+
 # Code Challenge
 
 ### 1. What is and what is it used code review?
@@ -16,21 +20,28 @@ The access levels help to change who can call a method or get/set a variable. Th
 
 ### 3. What architecture patterns do you know and how they work?
 
+-   **Client-Server**: This pattern is based on two components, a server and multiple clients(ex: browser or mobile). The server listens to the clients requests and then sends a response to each client.
+
+-   **Event-bus**: The way that this pattern works is first, a publisher triggers an event that is going to be sent to the event bus, then the event bus notifies a subscriber, and finally the subscriber runs the logic for the given event.
+
+-   **Microservices**: The way this pattern works is by dividing the logic into different specific services, that way each individual service works independently making it easier to develop and deploy functionality.
+
 ### 4. What design patterns do you know and how they work?
 
 ### 5. What is SOLID?
 
 It's an acronym for five principles in OOP(Object Oriented Programming).
 
-- **S – Single Responsibility Principle**: This principle means that a class should have a unique responsibility, so the class is simple (KISS principle).
+-   **S – Single Responsibility Principle**: This principle means that a class should have a unique responsibility, so the class is simple (KISS principle).
 
-- **O – Open/Closed Principle**: This principle is to leave a class in a way that is open to be extended for but closed to modifications.
+-   **O – Open/Closed Principle**: This principle is to leave a class in a way that is open to be extended for but closed to modifications.
 
-- **L – Liskov Substitution Principle**: This principle is related to keeping the superclass in a way that I can substitute its subclasses for the superclass and not affect the program at all.
+-   **L – Liskov Substitution Principle**: This principle is related to keeping the superclass in a way that I can substitute its subclasses for the superclass and not affect the program at all.
 
-- **I – Interface Segregation Principle**: For this principle, we need to create for the class the necessary interfaces that are going to use.
+-   **I – Interface Segregation Principle**: For this principle, we need to create for the class the necessary interfaces that are going to use.
 
-- **D – Dependency Inversion Principle**: This principle refers to keep the principle classes in a way that they are not dependent on the subclasses. To leave the superclass generic, and the subclasses more specific.
+-   **D – Dependency Inversion Principle**: This principle refers to keep the principle classes in a way that they are not dependent on the subclasses. To leave the superclass generic, and the subclasses more specific.
+
 ### 6. [What is a class?](./classes/Pizza.ts#L15-L73)
 
 A class is a way to build general functionality related to a specific type, for example, a car. <br />
