@@ -1,15 +1,13 @@
 import React from "react";
-import * as H from "history";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/button/button";
 import styles from "./Home.module.scss";
 
-interface HeaderBackgroundProps {
-	history: H.History;
-}
+export const HeaderBackground = (): React.ReactElement => {
+	const navigate = useNavigate();
 
-export const HeaderBackground = ({ history }: HeaderBackgroundProps): React.ReactElement => {
 	const handleOrderNow = () => {
-		history.push("/pizzaBuilder");
+		navigate("/pizzaBuilder");
 	};
 
 	return (

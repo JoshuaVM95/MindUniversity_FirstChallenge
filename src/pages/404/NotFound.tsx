@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
-import { RouteComponentProps } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./NotFound.module.scss";
 
-export const NotFound = ({ history }: RouteComponentProps): React.ReactElement => {
+export const NotFound = (): React.ReactElement => {
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.body.style.overflow = "hidden";
 		const myInterval = setInterval(() => {
 			clearInterval(myInterval);
 			document.body.style.overflow = "";
-			history.push("/");
+			navigate("/");
 		}, 3000);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
